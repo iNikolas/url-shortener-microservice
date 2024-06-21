@@ -1,4 +1,4 @@
-export function isValidUrl(input?: string) {
+export async function isValidUrl(input?: string): Promise<boolean> {
   if (!input) {
     return false;
   }
@@ -6,8 +6,14 @@ export function isValidUrl(input?: string) {
   try {
     new URL(input);
 
-    return true;
+    return await isUrlExists(input);
   } catch (error) {
     return false;
   }
+}
+
+export async function isUrlExists(url: string): Promise<boolean> {
+  const response = await fetch(url, { method: "HEAD" });
+
+  return response.ok;
 }
