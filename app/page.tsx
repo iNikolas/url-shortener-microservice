@@ -29,7 +29,7 @@ export default function Home() {
         <Link href="/api/shorturl/3">[this_project_url]/api/shorturl/3</Link>
 
         <h3>Will Redirect to:</h3>
-        <p>https://forum.freecodecamp.org/</p>
+        <p>https://github.com/iNikolas/url-shortener-microservice</p>
       </main>
       <footer>
         <p>
