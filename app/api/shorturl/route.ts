@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   const isValid = await isValidUrl(url);
 
   if (!isValid || !url) {
-    return NextResponse.json({ error: "Invalid URL" }, { status: 400 });
+    return NextResponse.json({ error: "Invalid URL" });
   }
 
   const select = { original_url: true, short_url: true };
